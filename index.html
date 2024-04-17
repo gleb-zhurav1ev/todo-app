@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Todolist</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+	</head>
+	<body>
+		<div class="main__container">
+			<div class="container">
+				<button onclick="closeTaskInput()" style="position: absolute; top: 10px; right: 10px; font-size: 20px">&#10006;</button>
+				<h1>Todolist</h1>
+				<input type="text" id="taskInput" placeholder="Введите задачу" />
+				<button onclick="addTask()">Добавить задачу</button>
+			</div>
+			<div class="container__tasks">
+				<h2>Сортировка задач</h2>
+				<div class="sort">
+					<select id="sortSelect" onchange="applySort()">
+						<option value="all">Все задачи</option>
+						<option value="incomplete">Еще не выполненные</option>
+					</select>
+				</div>
+				<h2>Список задач</h2>
+				<ul id="taskList"></ul>
+			</div>
+		</div>
+		<button id="openTaskInput" style="position: fixed; bottom: 20px; right: 20px; font-size: 24px">+</button>
+		<script src="main.js"></script>
+	</body>
+</html>
